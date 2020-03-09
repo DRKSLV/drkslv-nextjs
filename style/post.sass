@@ -1,0 +1,123 @@
+@import "style.sass"
+    
+//the Post Object
+.post 
+    border: 2px solid #d4d4d4
+    border-radius: 30px
+    padding: 10px
+    background-color: #ffffff
+    overflow: hidden
+
+    display: flex
+
+    .comments
+        float: right
+        padding: 10px
+
+        img 
+            width: 25px
+            margin-right: 5px
+            
+
+    .vote
+        &.wrapper 
+            position: relative
+            left: 0
+            top: 0
+            float: left
+
+            display: flex
+            flex-flow: column
+            align-items: center
+
+            margin: 10px
+            margin-bottom: 10px
+
+        & > img
+            width: 25px
+
+            &::selection 
+                background-color: rgba(0, 255, 255, 0)
+
+        &.up
+            filter: grayscale(100%)
+            -webkit-filter: grayscale(100%)
+
+        &.down 
+            filter: grayscale(100%) brightness(220%) 
+            -webkit-filter: grayscale(100%) brightness(220%) 
+             /*grayscale(100%) brightness(857%) for downvote4b*/
+
+        & > img[data-active=true] 
+            filter: none
+            -webkit-filter: none
+
+    .content 
+        float: left
+        flex: 1
+
+
+//the comment object
+.comment
+    @extend .post
+    border: none
+    padding: 0px
+    background-color: $global_background
+
+    .vote
+        &.wrapper 
+            margin: 10px
+
+        & > img 
+            width: 15px
+    
+    .content
+        .head
+            color: $emphasis_blue
+        p 
+            margin-top: 10px
+            margin-bottom: 5px
+
+
+//forms
+.postingForm
+    @extend .form
+    flex-flow: row wrap
+    margin-bottom: 30px
+
+    .title 
+        font-weight: bold
+
+    input[type="submit"] 
+        width: 60px
+        &[data-anonymous="true"]
+            background-color: $attention_red
+            &:hover
+                background-color: $warning_red
+                color: white
+    
+    .author
+        align-self: flex-end
+        margin-left: 10px
+        a, a:visited
+            text-decoration: none 
+            margin-left: 10px
+
+        &.loggedIn
+            a, a:visited
+                color: $success_green
+                font-weight: bold
+
+        &.anonymous
+            a, a:visited
+                color: $warning_red
+                font-style: italic
+
+.commentForm
+    @extend .form
+
+    button, input, textarea, select
+        background-color: $global_background
+
+.commentSection
+    margin-left: 20px

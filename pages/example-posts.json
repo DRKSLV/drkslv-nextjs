@@ -1,0 +1,42 @@
+[
+    {
+        "author": "<Demo>",
+        "title": "Disclaimer",
+        "text" : "These are just demo posts. Don't post. (auge> Erik)",
+        "upvotes": 0,
+        "downvotes": 3,
+        "myVote": "no"
+    },
+    {
+        "author": "ALICE",
+        "title": "Hey guys this is /posts",
+        "text" : "HELLO? ANYONE HERE",
+        "upvotes": 10,
+        "downvotes": 3,
+        "myVote": "no"
+    },
+    {
+        "author": "BOB",
+        "title": "Heeey Alice",
+        "text" : "Want to meet up?",
+        "upvotes": 2,
+        "downvotes": 3,
+        "myVote": "no"
+    },
+    {
+        "author": "ALICE",
+        "title": "BOB...",
+        "text" : "Bob you really need to stop following me around...\nHaven't you realized by now that i do not like you very much.\nIn fact, i believe your current behaviour comes close to what one would call harrassment.\nPlease understand that you are violating my personal space.\nBack off for once - or i'll get my lawyer involved...",
+        "upvotes": 0,
+        "downvotes": 0,
+        "myVote": "no"
+    },
+    {
+        "author": "BOB",
+        "title": "...",
+        "text" : "Alice...?",
+        "upvotes": 0,
+        "downvotes": 0,
+        "myVote": "no"
+    }
+]
