@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "next build && next export && git add out/ && git commit -m \"Deploy onto production branch\" && git subtree push --prefix out origin production"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +28,7 @@
     "url-loader": "^3.0.0"
   },
   "devDependencies": {
+    "babel-plugin-transform-define": "^2.0.0",
     "eslint-plugin-react-hooks": "^2.3.0"
   }
 }
