@@ -1,4 +1,6 @@
+const webpack = require('webpack')
 var isProd = true;
+var assetPrefix =  isProd ? '/n' : '';
 
 // next.config.js
 const withSass = require('@zeit/next-sass');
@@ -10,7 +12,7 @@ module.exports = withSass(withCSS({
   exportPathMap: () => ({
     '/': { page: '/' },
   }),
-  assetPrefix: isProd ? '/n' : '',
+  assetPrefix: assetPrefix,
   webpack: config => {
     config.plugins.push(
       new webpack.DefinePlugin({
