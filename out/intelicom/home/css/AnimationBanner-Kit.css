@@ -1,0 +1,23 @@
+@keyframes animatedBackground {
+from {
+
+    background-position: 0 bottom;
+
+}
+to {
+
+    background-position: -1440px bottom;
+
+}
+}
+
+#movingBANNER {
+	height:410px;
+	width:100%;
+	background-image: url(../img/InteliCLOUD-Banner.jpg);
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+
+	animation: animatedBackground 40s linear infinite;
+	font-family: 'TeleGroteskScreen-Regular', sans-serif; 
+}
