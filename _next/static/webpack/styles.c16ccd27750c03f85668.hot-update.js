@@ -1,9 +1,9 @@
 webpackHotUpdate("styles",{
 
-/***/ "./style/post.sass":
-/*!*************************!*\
-  !*** ./style/post.sass ***!
-  \*************************/
+/***/ "./style/style.sass":
+/*!**************************!*\
+  !*** ./style/style.sass ***!
+  \**************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29,7 +29,7 @@ webpackHotUpdate("styles",{
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1583768474306");
+            injectCss(link, link.href.split("?")[0] + "?unix=1583773388978");
           });
       }
     }
@@ -38,4 +38,4 @@ webpackHotUpdate("styles",{
 /***/ })
 
 })
-//# sourceMappingURL=styles.e51f42bac9f4d9b15ae9.hot-update.js.map
+//# sourceMappingURL=styles.c16ccd27750c03f85668.hot-update.js.map
