@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "babel-plugin-transform-define": "^2.0.0",
-    "eslint-plugin-react-hooks": "^2.3.0",
-    "file-loader": "^5.1.0"
+    "eslint-plugin-react-hooks": "^2.3.0"
   }
 }

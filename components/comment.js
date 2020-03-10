@@ -5,7 +5,7 @@ import Vote from "./vote";
 const icon = (props) => {
     return (
         <div className="comments">
-            <img src="./img/commentIcon.svg" alt="<comments>"></img>
+            <img src="/img/commentIcon.svg" alt="<comments>"></img>
             {props.count}
         </div>
     );
@@ -30,7 +30,7 @@ const Comment = (props) => {
 const CommentIcon = (props) => {
     return (
         <div className="comments" onClick={props.onClick}>
-            <img src="./img/commentIcon.svg" alt="<comments>"></img>
+            <img src="/img/commentIcon.svg" alt="<comments>"></img>
             {props.count}
         </div>
     );
