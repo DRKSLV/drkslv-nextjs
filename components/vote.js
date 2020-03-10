@@ -29,9 +29,9 @@ function Vote(props) {
 
     return (
         <div className="vote wrapper">
-            <img className="vote up" src="/img/upvote5.svg" alt="<upvote>" data-active={vote===1} onClick={click.bind(null, 1)}></img>
+            <img className="vote up" src={require("../res/img/upvote5.svg").default} alt="<upvote>" data-active={vote===1} onClick={click.bind(null, 1)}></img>
             <span>{up - down}</span> 
-            <img className="vote down" src="/img/downvote5.svg" alt="<downvote>" data-active={vote===-1} onClick={click.bind(null, -1)}></img>
+            <img className="vote down" src={require("../res/img/downvote5.svg").default} alt="<downvote>" data-active={vote===-1} onClick={click.bind(null, -1)}></img>
         </div>
     );
 }

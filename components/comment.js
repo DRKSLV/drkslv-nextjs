@@ -1,11 +1,12 @@
 import PostHead from "./postHead";
 import PostBody from "./postBody";
 import Vote from "./vote";
+import commentImage from "../res/img/commentIcon.svg";
 
 const icon = (props) => {
     return (
         <div className="comments">
-            <img src="/img/commentIcon.svg" alt="<comments>"></img>
+            <img src={require("../res/img/commentIcon.svg").default} alt="<comments>"></img>
             {props.count}
         </div>
     );
@@ -30,7 +31,7 @@ const Comment = (props) => {
 const CommentIcon = (props) => {
     return (
         <div className="comments" onClick={props.onClick}>
-            <img src="/img/commentIcon.svg" alt="<comments>"></img>
+            <img src={commentImage} alt="<comments>"></img>
             {props.count}
         </div>
     );
