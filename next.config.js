@@ -1,18 +1,13 @@
 const webpack = require('webpack')
-var isProd = false;
+var isProd = true;
 var assetPrefix = isProd ? '/n' : '';
 
 // next.config.js
 const withSass = require('@zeit/next-sass');
 const withCSS = require('@zeit/next-css');
-module.exports = withSass(
-    
-withCSS({
+module.exports = withSass(withCSS({
     cssLoaderOptions: {
-        url: (url) => {
-            console.log(url);
-            return true;
-        }
+        url: true
     },
 
     exportPathMap: () => ({
@@ -53,6 +48,4 @@ withCSS({
 
         return config
     }
-})
-
-);
+}));
