@@ -21,23 +21,7 @@
     font-style: italic
 
 /*---------"BRAND" Colors---------"*/
-$success_green: rgb(50, 214, 0)
-$attention_red: rgb(255, 193, 193)
-$warning_red: rgb(173, 0, 0)
-$cursed_blue: rgb(0, 243, 255)
-$emphasis_blue: rgb(15, 176, 255)
-$post-yellow: rgb(228, 208, 0)
-
-$eyeOfJudgement: rgb(255, 0, 254)
-
-$upvote: rgb(31, 152, 229)
-$downvote: rgb(255, 0, 79)
-$novote: rgb(132, 132, 132)
-
-$global_background: rgb(241, 241, 241)
-$foreground: rgb(255, 255, 255)
-$border: rgb(212, 212, 212)
-$selection: rgba(0, 125, 228, 0.541)
+@import ./colorShemes/dark
 
 /*----------- Global Styles -----------*/
 body 
@@ -47,6 +31,7 @@ body
     -webkit-text-size-adjust: 100%
     margin: 0
     padding: 0
+    color: $text_color
 
 
 /*These ignore the font style from the body, take them*/
@@ -72,8 +57,8 @@ textarea, input, button, select, option
     align-items: center
     justify-content: center
 
-    background-image:  linear-gradient(blue, $cursed_blue) /* linear-gradient($warning_red, $downvote)*/
-    color: $global_background
+    background-image: linear-gradient($header1, $header2) /* linear-gradient(#ff0024, #ffb300)  linear-gradient($warning_red, $downvote)*/
+    color: #ffffff
     margin-bottom: 20px
     position: fixed
     top: 0
@@ -116,6 +101,7 @@ textarea, input, button, select, option
         padding: 5px
 
         background-color: $foreground
+        color: $text_color
         
         font-size: inherit         
 
