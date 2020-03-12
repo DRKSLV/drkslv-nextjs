@@ -1,9 +1,35 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["styles"],{
 
-/***/ "./style/post.sass":
-/*!*************************!*\
-  !*** ./style/post.sass ***!
-  \*************************/
+/***/ "./node_modules/raw-loader/dist/cjs.js!./style/colorShemes/bright.css":
+/*!****************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./style/colorShemes/bright.css ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (":root {\r\n    /*---------UI Colors---------\"*/\r\n    --global_background: rgb(241, 241, 241);\r\n    --foreground: rgb(255, 255, 255);\r\n    --border: rgb(212, 212, 212);\r\n    --selection: rgba(0, 125, 228, 0.541);\r\n    --text_color: rgb(0,0,0);\r\n\r\n    /*--Header--*/\r\n    --header-solid: #003bea;\r\n    --header1: blue;\r\n    --header2: $cursed_blue;\r\n}");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./style/colorShemes/dark.css":
+/*!**************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./style/colorShemes/dark.css ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (":root { \r\n    /*---------UI Colors---------\"*/\r\n    --global_background: rgb(30, 30, 30);\r\n    --foreground: rgb(24, 24, 24);\r\n    --border: rgb(60, 60, 60);\r\n    --selection: rgba(0, 125, 228, 0.541);\r\n    --text_color: rgb(230, 230, 230);\r\n\r\n    /*--Header--*/\r\n    --header-solid: #003bea;\r\n    --header1: rgb(255, 0, 36);\r\n    --header2: rgb(255, 179, 0);\r\n}");
+
+/***/ }),
+
+/***/ "./style/style.sass":
+/*!**************************!*\
+  !*** ./style/style.sass ***!
+  \**************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29,7 +55,7 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1583867597606");
+            injectCss(link, link.href.split("?")[0] + "?unix=1584038284757");
           });
       }
     }
