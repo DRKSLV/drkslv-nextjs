@@ -93,20 +93,23 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 function ThemeButton(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       themeDark = _useState[0],
       setThemeDark = _useState[1];
 
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    setThemeDark(localStorage.getItem("edgy") === "true");
+  }, []);
+
   function toggle() {
+    localStorage.setItem("edgy", (!themeDark).toString());
     setThemeDark(!themeDark);
-    console.log(_raw_loader_style_colorShemes_dark_css__WEBPACK_IMPORTED_MODULE_2__["default"]);
-    console.log(_raw_loader_style_colorShemes_bright_css__WEBPACK_IMPORTED_MODULE_3__["default"]);
   }
 
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 22
     },
     __self: this
   }, __jsx("img", {
@@ -115,19 +118,19 @@ function ThemeButton(props) {
     height: "20px",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 23
     },
     __self: this
   }), __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_1__["Helmet"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 24
     },
     __self: this
   }, __jsx("style", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 25
     },
     __self: this
   }, themeDark ? _raw_loader_style_colorShemes_dark_css__WEBPACK_IMPORTED_MODULE_2__["default"] : _raw_loader_style_colorShemes_bright_css__WEBPACK_IMPORTED_MODULE_3__["default"])));
@@ -10973,23 +10976,17 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 var App = function App(props) {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_layout_header__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
+    className: "container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
     },
     __self: this
-  }), __jsx("div", {
-    className: "container",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
   }, __jsx("noscript", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 10
     },
     __self: this
   }, "JavaScript: Some features are diabled!"), __jsx("p", {
@@ -10998,19 +10995,19 @@ var App = function App(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 11
     },
     __self: this
   }, "HELLO CITIZENS", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 13
     },
     __self: this
   }), __jsx("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 14
     },
     __self: this
   }, "WELCOME"))));
@@ -11020,10 +11017,20 @@ var Index = function Index() {
   return __jsx(App, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 21
     },
     __self: this
   });
+};
+
+Index.getLayout = function (page) {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_layout_header__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }), page);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
