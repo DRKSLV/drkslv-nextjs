@@ -1,11 +1,11 @@
 const webpack = require('webpack')
-var isProd = true;
+var isProd = false;
 var assetPrefix = isProd ? '/n' : '';
 
 // next.config.js
 const withSass = require('@zeit/next-sass');
 const withCSS = require('@zeit/next-css');
-module.exports = withSass(withCSS({
+module.exports = withCSS(withSass({
     cssLoaderOptions: {
         url: true
     },

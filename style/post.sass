@@ -2,10 +2,10 @@
     
 //the Post Object
 .post 
-    border: 2px solid $border
+    border: 2px solid var(--border)
     border-radius: 30px
     padding: 10px
-    background-color: $foreground
+    background-color: var(--foreground)
     overflow: hidden
 
     display: flex
@@ -62,7 +62,7 @@
     @extend .post
     border: none
     padding: 0px
-    background-color: $global_background
+    background-color: var(--global_background)
 
     .vote
         &.wrapper 
@@ -117,7 +117,7 @@
     @extend .form
 
     button, input, textarea, select
-        background-color: $global_background
+        background-color: var(--global_background)
 
 .commentSection
     margin-left: 20px

@@ -1,5 +1,3 @@
-import React from 'react';
-
 function PostingForm (props) {
     var loggedInAs = props.user;
 

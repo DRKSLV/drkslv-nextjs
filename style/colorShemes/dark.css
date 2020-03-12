@@ -1,0 +1,13 @@
+:root { 
+    /*---------UI Colors---------"*/
+    --global_background: rgb(30, 30, 30);
+    --foreground: rgb(24, 24, 24);
+    --border: rgb(60, 60, 60);
+    --selection: rgba(0, 125, 228, 0.541);
+    --text_color: rgb(230, 230, 230);
+
+    /*--Header--*/
+    --header-solid: #003bea;
+    --header1: rgb(255, 0, 36);
+    --header2: rgb(255, 179, 0);
+}

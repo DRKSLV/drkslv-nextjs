@@ -21,17 +21,30 @@
     font-style: italic
 
 /*---------"BRAND" Colors---------"*/
-@import ./colorShemes/dark
+@import ./colorShemes/dark.css
+
+$success_green: rgb(50, 214, 0)
+$attention_red: rgb(255, 193, 193)
+$warning_red: rgb(173, 0, 0)
+$cursed_blue: rgb(0, 243, 255)
+$emphasis_blue: rgb(15, 176, 255)
+$post-yellow: rgb(228, 208, 0)
+
+$eyeOfJudgement: rgb(255, 0, 254)
+
+$upvote: rgb(31, 152, 229)
+$downvote: rgb(255, 0, 79)
+$novote: rgb(132, 132, 132)
 
 /*----------- Global Styles -----------*/
 body 
-    background-color: $global_background
+    background-color: var(--global_background)
     font-family: "BloggerSansFont"
     font-size: 21px
     -webkit-text-size-adjust: 100%
     margin: 0
     padding: 0
-    color: $text_color
+    color: var(--text_color)
 
 
 /*These ignore the font style from the body, take them*/
@@ -41,7 +54,7 @@ textarea, input, button, select, option
 
 
 ::selection 
-    background-color: $selection
+    background-color: var(--selection)
 
 
 /*----------- Classes -----------*/
@@ -57,7 +70,8 @@ textarea, input, button, select, option
     align-items: center
     justify-content: center
 
-    background-image: linear-gradient($header1, $header2) /* linear-gradient(#ff0024, #ffb300)  linear-gradient($warning_red, $downvote)*/
+    //background-image: linear-gradient(--header1, --header2) /* linear-gradient(#ff0024, #ffb300)  linear-gradient($warning_red, $downvote)*/
+    background-color: var(--header-solid)
     color: #ffffff
     margin-bottom: 20px
     position: fixed
@@ -95,20 +109,20 @@ textarea, input, button, select, option
     button, input, textarea, select
         width: 100%
 
-        border: 2px solid $border
+        border: 2px solid var(--border)
         border-radius: 10px
         
         padding: 5px
 
-        background-color: $foreground
-        color: $text_color
+        background-color: var(--foreground)
+        color: var(--text_color)
         
         font-size: inherit         
 
     select
         appearance: none
         -webkit-appearance: none
-        background: url("/res/img/dropdownarrow.svg") no-repeat right $foreground
+        background: url("/res/img/dropdownarrow.svg") no-repeat right var(--foreground)
         background-size: 20px
         background-position: calc(100% - 10px)
         padding-right: 20px

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ThemeButton from "../themeButton";
 
 const Header = () => (
   <div className="header">
@@ -8,6 +9,7 @@ const Header = () => (
     <Link href="/chat" as={`${process.env.ASSET_PREFIX}/chat`}>
       <a>Chat</a>
     </Link>
+    <ThemeButton></ThemeButton>
   </div>
 );
 
