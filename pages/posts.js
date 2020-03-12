@@ -18,7 +18,7 @@ const App = (props) => {
 
     return (
         <>
-            <Header />
+            
             <div className="container">
                 <noscript>JavaScript: Some features are diabled!</noscript>
                 <PostingForm user="FELIX" />
@@ -30,5 +30,6 @@ const App = (props) => {
 };
 
 const Index = () => (<App posts={examplePosts}/>);
+Index.getLayout = page => <><Header />{page}</>;
 
 export default Index;

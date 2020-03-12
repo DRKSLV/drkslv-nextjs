@@ -1,5 +1,5 @@
 const webpack = require('webpack')
-var isProd = false;
+var isProd = true;
 var assetPrefix = isProd ? '/n' : '';
 
 // next.config.js

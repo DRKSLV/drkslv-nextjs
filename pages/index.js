@@ -6,7 +6,6 @@ const App = (props) => {
 
     return (
         <>
-            <Header />
             <div className="container">
                 <noscript>JavaScript: Some features are diabled!</noscript>
                 <p style={{textAlign:"center"}}>
@@ -20,5 +19,6 @@ const App = (props) => {
 };
 
 const Index = () => (<App />);
+Index.getLayout = page => <><Header />{page}</>;
 
 export default Index;
