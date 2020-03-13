@@ -1,11 +1,19 @@
 import Header from "../components/layout/header";
-import "../style/acc.sass";
+import style from "../style/acc.sass";
+style.use();
 import { Helmet } from 'react-helmet'
+import { useEffect } from "react";
+
+
 
 const Index = () => {
+    useEffect(() => {
+        return () => {
+            style.unuse();
+        }
+    }, [])
 
     var accountCount = 0;
-
     return(
         <div className="container">
             <object data={require("../res/img/eyeOfJudgementEllipse.svg").default} type="image/svg+xml">

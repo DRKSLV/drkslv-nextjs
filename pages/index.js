@@ -1,6 +1,7 @@
 
 import Header from "../components/layout/header"
-import "../style/style.sass";
+import style from "../style/style.sass";
+style.use();
 import { useEffect, useState } from "react";
 
 const App = (props) => {

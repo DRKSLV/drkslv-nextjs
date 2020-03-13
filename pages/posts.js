@@ -4,7 +4,8 @@ import examplePosts from "./example-posts.json";
 import Post from "../components/post"
 import PostingForm from "../components/postingForm"
 import Comment from "../components/comment";
-import "../style/post.sass";
+import style from "../style/post.sass";
+style.use();
 
 const App = (props) => {
     const post_objects = [];

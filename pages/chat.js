@@ -1,5 +1,6 @@
 import Header from "../components/layout/header";
-import "../style/chat.sass";
+import style from "../style/chat.sass";
+style.use();
 import ChatWindow from "../components/chatWindow";
 
 const App = (props) => {
